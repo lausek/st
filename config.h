@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "mono:pixelsize=13:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -80,32 +80,35 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
 unsigned int alpha = 0xed;
 
 static const char *colorname[] = {
-	"#073642",  /*  0: black    */
-	"#dc322f",  /*  1: red      */
-	"#859900",  /*  2: green    */
-	"#b58900",  /*  3: yellow   */
-	"#268bd2",  /*  4: blue     */
-	"#d33682",  /*  5: magenta  */
-	"#2aa198",  /*  6: cyan     */
-	"#eee8d5",  /*  7: white    */
-	"#002b36",  /*  8: brblack  */
-	"#cb4b16",  /*  9: brred    */
-	"#586e75",  /* 10: brgreen  */
-	"#657b83",  /* 11: bryellow */
-	"#839496",  /* 12: brblue   */
-	"#6c71c4",  /* 13: brmagenta*/
-	"#93a1a1",  /* 14: brcyan   */
-	"#fdf6e3",  /* 15: brwhite  */
+	"#282a2e",  /*  0: black    */
+	"#a54242",  /*  1: red      */
+	"#8c9440",  /*  2: green    */
+	"#de935f",  /*  3: yellow   */
+	"#5f819d",  /*  4: blue     */
+	"#85678f",  /*  5: magenta  */
+	"#5e8d87",  /*  6: cyan     */
+	"#707880",  /*  7: white    */
+     
+	"#373b41",  /*  8: brblack  */
+	"#cc6666",  /*  9: brred    */
+	"#b5bd68",  /* 10: brgreen  */
+	"#f0c674",  /* 11: bryellow */
+	"#81a2be",  /* 12: brblue   */
+	"#b294bb",  /* 13: brmagenta*/
+	"#8abeb7",  /* 14: brcyan   */
+	"#c5c8c6",  /* 15: brwhite  */
+
+    [255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"black",   /* 256 -> bg */
-	"#00cc00", /* 257 -> fg */
-    	"magenta"  /* 258 -> cursor */
+	"#262626",  /* 256 -> bg */
+	"#c5c8c6",  /* 257 -> fg */
+    "magenta"   /* 258 -> cursor */
 };
 
 
@@ -113,8 +116,8 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 12;
-unsigned int defaultbg = 0;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 256;
 static unsigned int defaultcs = 14;
 static unsigned int defaultrcs = 15;
 
